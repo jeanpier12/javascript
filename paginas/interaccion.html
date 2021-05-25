@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inicial</title>
+    </script>
+</head>
+
+<body>
+    <h1>load vs DOMContentLoaded</h1>
+    <br>
+    <p>Año:<input type="text" id="idAno" value="Pelicula: 2012">
+    </p>
+    <script>
+        window.addEventListener("DOMContentLoaded", inicializarAno);
+
+        function inicializarAno() {
+            var _ano = new Date().getFullYear();
+            document.getElementById("idAno").value = _ano;
+            document.getElementById("idAno").addEventListener("click",cambiaEstilo);
+        }
+        var cont = 0;
+        function cambiaEstilo()
+        {
+            document.getElementById("idAno").style.color="red";
+            document.getElementById("idAno").style.fontSize="80px"
+        }
+
+    </script>
+</body>
+
+</html>
